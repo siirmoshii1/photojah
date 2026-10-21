@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-forest-dark: #0e1f18;
+    --color-forest-main: #142e23;
+    --color-forest-light: #1b3d30;
+    --color-ivory: #fbf8f1;
+    --color-cream: #f4eee2;
+    --color-gold: #d4af37;
+    --color-gold-light: #f5d77f;
+    --color-gold-dark: #9a7b1c;
+    --color-charcoal: #1c2120;
+    --color-warm-brown: #5c3a21;
+  }
+
+  html, body {
+    background-color: #0e1f18;
+    color: #fbf8f1;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+}
+
+/* Custom Typography helpers */
+.font-vintage {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-typewriter {
+  font-family: 'Courier Prime', Courier, monospace;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-script {
+  font-family: 'Homemade Apple', cursive;
+}
+
+/* Subtle Film Grain Noise Overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.paper-grain {
+  background-image: 
+    radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(240, 230, 215, 0.2) 100%);
+  background-size: 8px 8px, 100% 100%;
+}
+
+.linen-texture {
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 4px);
+}
+
+/* Shutter flash effect */
+@keyframes flashAnimation {
+  0% { opacity: 0; }
+  15% { opacity: 0.95; }
+  100% { opacity: 0; }
+}
+
+.camera-flash-overlay {
+  animation: flashAnimation 450ms cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+/* Print Stylesheet for Photojah */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+  }
+}

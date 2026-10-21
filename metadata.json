@@ -1,0 +1,6 @@
+{
+  "name": "Photojah - Vintage Photo Booth",
+  "description": "Capture vintage Polaroid photographs and photo strips with retro film filters, custom frames, captions, and high-res print export.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
